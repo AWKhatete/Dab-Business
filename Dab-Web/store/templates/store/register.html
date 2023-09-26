@@ -1,0 +1,40 @@
+{% extends 'store/main.html' %}
+{% load static %}
+{% block content %}
+    <div class="container-field">
+        <form action="{% url 'register' %}" method="POST" class="row g-3">
+            {% csrf_token %}
+        <div class="row g-6">
+            <div class="col-md-6">
+                <label for="inputEmail4" class="form-label">First name</label>
+                <input name="first_name" class="form-control" placeholder="First name" aria-label="First name">
+            </div>
+            <div class="col-md-6">
+                <label for="inputEmail4" class="form-label">Last name</label>
+                <input name="last_name" class="form-control" placeholder="Last name" aria-label="Last name">
+            </div>
+            <div class="col-md-6">
+                <label for="inputEmail4" class="form-label">Email</label>
+                <input name="email" class="form-control" placeholder="Email" aria-label="Email">
+            </div>
+            <div class="col-md-6">
+                <label for="inputEmail4" class="form-label">Username</label>
+                <input name="username" class="form-control" placeholder="user name" aria-label="user name">
+            </div>
+            <div class="col-md-6">
+                <label for="inputEmail4" class="form-label">Password</label>
+                <input name="password" class="form-control" placeholder="Password" aria-label="Password">
+            </div>
+            <div class="col-md-6">
+                <label for="inputEmail4" class="form-label">Confirm Password</label>
+                <input name="confirm_password" class="form-control" placeholder="Confirm Password" aria-label="Confirm Password">
+            </div>
+            <br>
+            <br>
+            <div class="col-12">
+                <button type="submit" class="btn btn-primary btn-lg">REGISTER</button>
+              </div>
+        </div>
+        </form>
+    </div>
+{% endblock content %}
